@@ -23,6 +23,11 @@ export const CustomType: CollectionConfig = {
         },
       },
     },
+    {
+      name: 'timestamps',
+      type: 'json',
+      required: true,
+    },
   ],
   endpoints: [
     {
