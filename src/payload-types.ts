@@ -165,6 +165,15 @@ export interface Media {
 export interface CustomType {
   id: number;
   status: 'preview' | 'published' | 'rejected';
+  timestamps:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -275,6 +284,7 @@ export interface MediaSelect<T extends boolean = true> {
  */
 export interface CustomTypeSelect<T extends boolean = true> {
   status?: T;
+  timestamps?: T;
   updatedAt?: T;
   createdAt?: T;
 }
